@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <Search></Search>
+    <List></List>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Search from "./components/Search.vue";
+import List from "./components/List.vue";
+// import axios from "axios";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: {Search, List},
+  methods: {
+    // getStudent() {
+    //   axios.get("http://localhost:8080/api/students").then(
+    //     (response) => {
+    //       console.log("请求成功了", response.data);
+    //     },
+    //     (error) => {
+    //       console.log("请求失败了", error.message);
+    //     }
+    //   );
+    // },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
